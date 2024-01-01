@@ -21,7 +21,8 @@ import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
             <button type="button" class="btn btn-danger btn-link" (click)="activeModal.close('Close click')">DELETE</button>
         </div>
     </div>
-    `
+    `,
+    standalone:true,
 })
 export class NgbdModalContent {
     @Input() name;
@@ -31,7 +32,8 @@ export class NgbdModalContent {
 
 @Component({
     selector: 'app-modal-component',
-    templateUrl: './modal.component.html'
+    templateUrl: './modal.component.html',
+    standalone: true,
 })
 export class NgbdModalComponent {
     constructor(private modalService: NgbModal) {}
